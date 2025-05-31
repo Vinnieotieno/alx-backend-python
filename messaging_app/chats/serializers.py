@@ -31,3 +31,9 @@ class ConversationSerializer(serializers.ModelSerializer):
         messages = obj.messages.order_by('-sent_at')[:10]  # Return last 10 messages
         return MessageSerializer(messages, many=True).data
 
+    def validate_message_body(self, value):
+        if len(value.strip()) == 0:
+            raise serializers.ValidationError("Message body cannot be empty.")
+        return value
+
+
