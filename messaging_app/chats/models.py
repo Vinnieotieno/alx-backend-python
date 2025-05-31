@@ -15,7 +15,7 @@ class User(AbstractUser):
     email = models.EmailField(unique=True)
     phone_number = models.CharField(max_length=15, blank=True)
 
-    REQUIRED_FIELDS = ['email', 'first_name', 'last_name']
+    REQUIRED_FIELDS = ['email', 'password' 'first_name', 'last_name']
     USERNAME_FIELD = 'username'
 
 class Conversation(models.Model):
