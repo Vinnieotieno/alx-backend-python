@@ -8,6 +8,8 @@ from fixtures import TEST_PAYLOAD
 
 
 class TestGithubOrgClient(unittest.TestCase):
+    """Unit tests for GithubOrgClient class in client.py"""
+
     @parameterized.expand([
         ("google",),
         ("abc",),
@@ -64,6 +66,8 @@ class TestGithubOrgClient(unittest.TestCase):
     }
 ], class_name_func=lambda cls, _, params: "TestIntegrationGithubOrgClient")
 class TestIntegrationGithubOrgClient(unittest.TestCase):
+    """Integration tests for GithubOrgClient with real data mocks"""
+
     @classmethod
     def setUpClass(cls):
         cls.get_patcher = patch("requests.get")
