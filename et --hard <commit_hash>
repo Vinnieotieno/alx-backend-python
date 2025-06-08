@@ -1,0 +1,137 @@
+[33mcommit fd611b14ee76fd8ea41d4d786735925c6e20ce23[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Vinnieotieno <vinnieotieno004@gmail.com>
+Date:   Sun Jun 8 17:04:58 2025 +0300
+
+    Implement Authentication Add Permissions Pagination and Filtering
+
+[33mcommit 28d2236985e5bf7f6e0401284045296f57495e6c[m
+Author: Vinnieotieno <vinnieotieno004@gmail.com>
+Date:   Sat May 31 15:08:24 2025 +0300
+
+    Add messaging_app Django REST API project
+
+[33mcommit 6a99bde10ccaf73889d39529696eaa78403e1240[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sat May 31 14:54:31 2025 +0300
+
+    Create  messaging_app
+
+[33mcommit 8d4bfe6e91da71b8e9619a0bf96936f75f85a594[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Fri May 30 15:19:20 2025 +0300
+
+    Update test_utils.py
+
+[33mcommit 834d8e97e8791492d6fa58d3a280e9d8798d5691[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Fri May 30 15:13:27 2025 +0300
+
+    Create  test_utils.py
+
+[33mcommit f41d03fd8fd25954bacd716565c284197116aaa7[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sat May 24 20:02:26 2025 +0300
+
+    Create 3-concurrent.py
+
+[33mcommit 5be131022f404f75751bd2b63945ee6afff496eb[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sat May 24 19:31:30 2025 +0300
+
+    Update 1-execute.py
+
+[33mcommit 2422988556ee1575a5573d696cbe62ebbc668210[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sat May 24 19:24:04 2025 +0300
+
+    Create 1-execute.py
+
+[33mcommit c280faa87cb5d498003faf49303877129954977b[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sat May 24 19:04:54 2025 +0300
+
+    Update 0-databaseconnection.py
+
+[33mcommit 31c81eea4931a99137adadb228c4331b54589c18[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sat May 24 18:59:23 2025 +0300
+
+    Create 0-databaseconnection.py
+
+[33mcommit 20b30e80865423b476072110210bdf27ace57e9e[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Thu May 22 15:39:29 2025 +0300
+
+    Create 4-cache_query.py
+
+[33mcommit 87fffa4fb756399a41c7865d79cb993347f45b30[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Thu May 22 15:36:04 2025 +0300
+
+    Create 3-retry_on_failure.py
+
+[33mcommit dc9759ca646ce1f111d7bace20be487332cb23f1[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Thu May 22 15:31:24 2025 +0300
+
+    Create 2-transactional.py
+
+[33mcommit d6b2d359648283ae62b1cad1e42e8e23908ad032[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Thu May 22 15:25:27 2025 +0300
+
+    Create 1-with_db_connection.py
+
+[33mcommit 2fb44a17fd9c9d2081a12205eb1d90c7ea08998f[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Thu May 22 15:16:05 2025 +0300
+
+    Update 0-log_queries.py
+
+[33mcommit 9da3b5d00b490196bde1f034b277f8204997112e[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Thu May 22 15:05:52 2025 +0300
+
+    Create 0-log_queries.py
+
+[33mcommit 9ad2529c84ea04152d818e05b80b6af162bfe67c[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sun May 18 02:18:26 2025 +0300
+
+    Create 4-stream_ages.py
+
+[33mcommit 68601b4fb213a6a0bb46b2bf9c8dd87a56ce20ca[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sun May 18 02:16:05 2025 +0300
+
+    Create 2-lazy_paginate.py
+
+[33mcommit 0bafe6cd48e4b4114acefda47ad87f32efef9aaf[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sun May 18 02:10:08 2025 +0300
+
+    Update 1-batch_processing.py
+
+[33mcommit 919d2a411bb1a2a3f7854bbb086e58db95bcda84[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sun May 18 02:08:41 2025 +0300
+
+    Create 1-batch_processing.py
+
+[33mcommit 8bad5b032f6d1d4134ced0bba54cef2510f231b9[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sun May 18 02:05:05 2025 +0300
+
+    Create 0-stream_users.py
+
+[33mcommit 6353d24203792b18b953179d08d7e08a5b37c2ef[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sun May 18 02:01:21 2025 +0300
+
+    Create seed.py
+
+[33mcommit 532bd01bdaf1118bde6d65d60d1edab06aa6f898[m
+Author: Vinnieotieno <121629812+Vinnieotieno@users.noreply.github.com>
+Date:   Sun May 18 01:38:46 2025 +0300
+
+    Create README.md
