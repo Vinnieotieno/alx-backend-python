@@ -1,0 +1,22 @@
+{
+  "info": {
+    "name": "Messaging App API",
+    "_postman_id": "demo-collection-id",
+    "description": "Test JWT login, conversation & message endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "JWT Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "{{base_url}}/api/token/", "host": ["{{base_url}}"], "path": ["api", "token"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"username\": \"user\", \"password\": \"pass\" }"
+        }
+      }
+    }
+  ]
+}
