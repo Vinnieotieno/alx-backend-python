@@ -17,5 +17,14 @@ def log_message_edit(sender, instance, **kwargs):
         if old.content != instance.content:
             MessageHistory.objects.create(message=old, old_content=old.content)
             instance.edited = True
+            instance.edited_by = instance.sender
     except Message.DoesNotExist:
         pass
+
+@receiver(post_delete, sender=User)
+def cleanup_user_related_data(sender, instance, **kwargs):
+    Message.objects.filter(sender=instance).delete()
+    Message.objects.filter(receiver=instance).delete()
+    Notification.objects.filter(user=instance).delete()
+    MessageHistory.objects.filter(message__sender=instance).delete()
+    MessageHistory.objects.filter(message__receiver=instance).delete()

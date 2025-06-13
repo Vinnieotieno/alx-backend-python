@@ -1,0 +1,15 @@
+[33m64f8a1b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m Implement Django signal-based messaging system
+[33m0f25c7b[m[33m ([m[1;31morigin/master[m[33m)[m naming
+[33m70f938a[m Fix submodule issue — re-adding django-middleware-0x03 as regular folder
+[33m0885355[m Re-add Django-Middleware-0x03 as a regular folder (not submodule)
+[33ma4a4926[m Fix: remove submodule and track Django-Middleware-0x03 as normal folder
+[33m72aa6a5[m Re-add django-middleware-0x03 folder as a normal directory
+[33m3960f1b[m Remove submodule django-middleware-0x03
+[33m8f88b3f[m Fix folder name issue
+[33m1490558[m Merge branch 'master' of https://github.com/Vinnieotieno/alx-backend-python
+[33m9bb700a[m changes
+[33m1216ed8[m Merge branch 'master' of github.com:Vinnieotieno/alx-backend-python
+[33mf9a2940[m Initial commit with middleware, logs, and app structure
+[33m5f98a66[m middleware
+[33m2a0acd4[m Rest_Framework and Simple_JWT
+[33mad7bba0[m updated settings
