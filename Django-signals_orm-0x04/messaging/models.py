@@ -25,3 +25,5 @@ class MessageHistory(models.Model):
     message = models.ForeignKey(Message, on_delete=models.CASCADE, related_name='history')
     old_content = models.TextField()
     edited_at = models.DateTimeField(auto_now_add=True)
+
+# messaging/signals.py
