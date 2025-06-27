@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Scale deployment to 3 replicas
+kubectl scale deployment django-messaging-app --replicas=3
+
+# Verify scaling
+kubectl get pods
+
+# Load test using wrk (install wrk if you don't have it)
+# Example load test for 30 seconds
+wrk -t4 -c20 -d30s http://$(minikube ip):8000/
+
+# Check resource usage
+kubectl top pods
