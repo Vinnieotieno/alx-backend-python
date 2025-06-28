@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Apply rolling update
+kubectl apply -f messaging_app/blue_deployment.yaml
+
+# Monitor rollout
+kubectl rollout status deployment/messaging-app-blue
+
+# Test availability during update
+while true; do
+  curl -s -o /dev/null -w "%{http_code}\\n" http://$(minikube ip):8000/
+  sleep 2
+done
