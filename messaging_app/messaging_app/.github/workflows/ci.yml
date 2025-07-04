@@ -2,11 +2,9 @@ name: Django CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   test:
@@ -20,7 +18,6 @@ jobs:
           MYSQL_DATABASE: messaging_test
         ports:
           - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
       - name: Checkout code
@@ -33,11 +30,24 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python3 -m pip3 install --upgrade pip
+          pip3 install --upgrade pip
           pip3 install -r messaging_app/requirements.txt
+          pip3 install flake8 coverage
 
-      - name: Run tests
+      - name: Lint code
+        run: |
+          flake8 messaging_app/
+
+      - name: Run tests with coverage
         env:
           DATABASE_URL: mysql://root:root@127.0.0.1:3306/messaging_test
         run: |
-          pytest messaging_app/
+          coverage run -m pytest messaging_app/
+          coverage report
+          coverage xml
+
+      - name: Upload coverage reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage.xml
