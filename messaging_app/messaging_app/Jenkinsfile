@@ -4,16 +4,19 @@ pipeline {
     environment {
         GIT_CREDENTIALS = 'github-credentials'
         VENV = '.venv'
+        DOCKER_IMAGE = 'yourdockerhubuser/messaging_app:latest'
+        DOCKER_CREDENTIALS = 'dockerhub-credentials'
     }
 
     stages {
-        stage('Clone Repository') {
-            steps {
-                git branch: 'main', credentialsId: "${GIT_CREDENTIALS}", url: 'https://github.com/Vinnieotieno/alx-backend-python.git'
-                sh 'git branch'
-            }
-        }
+        stage('Clone Repo') {
+            git branch: 'main',
+                    credentialsId: "${GIT_CREDENTIALS}",
+                    url: 'https://github.com/Vinnieotieno/alx-backend-python.git'
 
+                
+                sh 'git branch'
+        }
         stage('Install Dependencies') {
             steps {
                 sh '''
@@ -24,19 +27,33 @@ pipeline {
                 '''
             }
         }
-
         stage('Run Tests') {
             steps {
                 sh '''
                     . ${VENV}/bin/activate
-                    pytest messaging_app/ --junitxml=messaging_app/test-results.xml
+                    pytest --junitxml=messaging_app/test-results.xml
                 '''
             }
         }
-
-        stage('Publish Test Report') {
+        stage('Publish Report') {
             steps {
                 junit 'messaging_app/test-results.xml'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    docker.build("${DOCKER_IMAGE}", "--file messaging_app/Dockerfile .")
+                }
+            }
+        }
+        stage('Push Docker Image') {
+            steps {
+                withDockerRegistry([credentialsId: "${DOCKER_CREDENTIALS}", url: ""]) {
+                    script {
+                        docker.image("${DOCKER_IMAGE}").push()
+                    }
+                }
             }
         }
     }
