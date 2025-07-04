@@ -7,30 +7,34 @@ pipeline {
     }
 
     stages {
-        stage('Clone Repo') {
+        stage('Clone Repository') {
             steps {
-                git credentialsId: "${GIT_CREDENTIALS}", url: 'https://github.com/Vinnieotieno/alx-backend-python.git'
+                git branch: 'main', credentialsId: "${GIT_CREDENTIALS}", url: 'https://github.com/Vinnieotieno/alx-backend-python.git'
+                sh 'git branch'
             }
         }
+
         stage('Install Dependencies') {
             steps {
                 sh '''
                     python3 -m venv ${VENV}
                     . ${VENV}/bin/activate
-                    pip install --upgrade pip
-                    pip install -r messaging_app/requirements.txt
+                    pip3 install --upgrade pip
+                    pip3 install -r messaging_app/requirements.txt
                 '''
             }
         }
+
         stage('Run Tests') {
             steps {
                 sh '''
                     . ${VENV}/bin/activate
-                    pytest --junitxml=messaging_app/test-results.xml
+                    pytest messaging_app/ --junitxml=messaging_app/test-results.xml
                 '''
             }
         }
-        stage('Publish Report') {
+
+        stage('Publish Test Report') {
             steps {
                 junit 'messaging_app/test-results.xml'
             }
